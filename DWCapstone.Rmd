@@ -5,35 +5,26 @@ library(dplyr)
 library(tidyr)
 getwd()
 setwd("C:/Users/Bhavna/Desktop/Data_science/capstone_project")
+
+
+#==================
+#DATA WRANGLING
+#===================
 #Load and examin the datset 
 cust.df <- read.csv("http://goo.gl/PmPkaG")
 str(cust.df)
+
 #find columns with missing values 
 colSums(is.na(cust.df))
 #replace missing satisfaction service/selection values with mean
 cust.df$sat.service[is.na(cust.df$sat.service)] = round (mean(cust.df$sat.service, na.rm = TRUE)) 
 cust.df$sat.selection[is.na(cust.df$sat.selection)] = round (mean(cust.df$sat.selection, na.rm = TRUE)) 
 #change email into a binary variable 
-#Make a new column 'total spending' that contains the sum of online and store spending for each customer,
-#find average spending ammount by customers: online/instore/total
-cust.df<- cust.df %>% mutate(email = ifelse(email == "yes",1,0)) %>% 
-  mutate(total.spend = online.spend + store.spend) 
-#Find mean value spend by customers for online instore and total purchases. 
-mean(cust.df$total.spend)
-mean(cust.df$online.spend)
-mean(cust.df$store.spend)
-#observation: On average a customer spend $217 for shopping, while a customer spend more than 3X shopping online
-#mean(170.32) as compared to the store mean(47.58)
-
-#observation5:Online visits are directly related to online spend. On average customers visit 
-#the online store 28 times and make purchases 8 times. Which means there is about(1:4) ratio between visits 
-#and purchase.
-sum(50>cust.df$online.spend)
-sum(between(cust.df$online.spend,50,100))
-sum(between(cust.df$online.spend,100,250))
-sum(between(cust.df$online.spend,250,500))
-sum(between(cust.df$online.spend,500,1000))
-sum(1000<cust.df$online.spend)
-sum(1000<cust.df$total.spend)
-
-#Out of 1000 customers only 30 have spent over $1000 in total. These points can be considered outliers. 
+#Make two new columns 'total.spend' that contains a sum of online and store spending for each customer,
+#total.trans that is the sum of online.trans and store.trans
+#and average spending ammount by customers: online and instore
+table(cust.df$email)
+cust.df<- cust.df %>% mutate(email = ifelse(email == "yes",1,0)) 
+cust.df<- cust.df %>% mutate(total.spend = (online.spend + store.spend)) %>% 
+mutate(total.trans = (online.trans+store.trans)) 
+str(cust.df)
