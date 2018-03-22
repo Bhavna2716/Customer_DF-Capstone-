@@ -4,48 +4,53 @@ author: "Bhavna Chouhan"
 date: "March 12, 2018"
 output: html_document
 ---
-Goal: 
-Excellent product and on point service are foundation stones of a successful business model. By analyzing the customer survey dataset that contains satisfaction survey and product selection rating along with other information, we can study a customer's point of view about the quality of our product and services in order to improve our business performance. 
+---
+title: "cust.df Capstone"
+author: "Bhavna Chouhan"
+date: "March 12, 2018"
+output: html_document
+---
+Excellent product selection and on point service are foundation stones of a successful business model. By analyzing the customer survey 
+dataset that contains satisfaction survey and product selection rating along with other important information. 
+collected from customers. We can study a customer's point of view about the quality of our product and services in order to improve our 
+business performance. 
 
-We can also examine personal details and shopping patterns of customers to divide them into groups. This segmentation can further help determine target audience and right marketing tools to reach them. 
+We can also examine personal details and shopping patterns of customers to divide them into groups for further analysis. 
+This segmentation can further help determine target audience and right marketing tools to reach them. 
+Comparing several other variables could help us design ideal promotional strategy to find our key audience, which could convert 
+into potential sales in future and help the business thrive.  
 
-Do our customers belong to a specific age and income group? 
+Key Questions: 
 
-What percentage of our customers are internet savvy and prefer online shopping as appose to traditional in-store shopping?  
+1.Analyze customer satisfaction and product selection rating to find out how well the products are doing and how accurate is product 
+selection?
+A - If we pair satisfaction survey ratings with number of purchases and amount spend shopping it could provide insights about 
+correlation between sales and customer satisfaction. 
 
-What percentage of our customer base is tech savvy and prefer online purchase compare to store shopping 
+2. Analyze online vs in-store shopping pattern and find out whether customers prefer one over the other. 
 
-Comparing several other variables could help us design ideal promotional strategy to find our audience, which could convert into potential sales in future and help the business thrive.  
+A-Identifying the customer's shopping preferences can help design right promotional and marketing strategy. 
+(online ads/promotional emails vs mails/coupons and offers etc.) 
+B- Discovering the ratio between online and instore transections can help us allocate right percentage of budget for both 
+online and traditional marketing strategies.  
+4. Finding association between age and credit score rating to discover if a certain age group has a better overall credit score 
+percentage compare to others.
 
-Findings:
+5. What's the average credit score that most customers have? Can credit score be a good measure of the amount spent shopping by a 
+customer? 
+A- If a credit score is related to amount spent online the above findings can help us divide our target audience into multiple groups 
 
-Lets take a detailed look at the available information and what kind of details we could extract from the dataset to achieve our goals. 
-
-1.Analyze customer satisfaction and product selection rating to find out how well the products are doing and what is the quality of product selection?
-
-2. If we pair satisfaction survey ratings with number of purchases and amount spend shopping it could provide insights about correlation between sales and customer satisfaction. 
-
-2. Identify the online vs in-store shopping trend and whether customers prefer one over the other. 
-
-3. Identifying the customer's shopping preferences can help design right promotional and marketing strategy. (online ads/promotional emails vs mails/coupons and offers etc.) 
-
-4. Finding association between age and credit score rating to discover if a certain age group has a better overall credit score percentage compare to others.
-
-5. What's the average credit score that most customers have? Can a credit score be a good measure of the amount spent shopping by a customer? 
-(If a credit score is related to amount spent online the above findings can help us divide our target audience into multiple groups) 
-
-6.Are the number of online visits related to number of transactions made online. If more visits lead to more transections, sending promotional emails and showing pop-up ads could potentially lead to more sales. 
-
-If customers prefer one shopping style over the other the above discovery could also be helpful in allocating right percentage of budget for both online and traditional marketing strategies which could contribute to drive maximum sales. 
-
+6. Are the number of online visits related to number of transactions made online? If more visits lead to more transections, 
+sending promotional emails and showing pop-up ads could potentially lead to more sales. 
 7. How closely distance to store is related to customer's preference to shop online or in-store. 
-Do customers living close to store prefer in-store shopping over online shopping and vice a versa? 
+A -Do customers living close to store prefer in-store shopping over online shopping and vice a versa? 
 
-8. Finding association between customer satisfaction, product selection rating and number of sales. In-short how often a satisfied customer equals a returning customer?  
+8. Finding association between customer satisfaction, product selection rating and number of transactions. In-short how often a 
+satisfied customer means a returning customer?  
 
-9. By pairing above findings with other available data we can dig dipper for other interesting finds which could play a key role in defining overall business strategy.
+9. By pairing above findings with other available data we can dig dipper for other interesting finds which could play a key role 
+in defining overall business strategy. 
 
+Source: The dataset for this project is available @ https://goo.gl/PmPkaG%22 
 
-Source: The dataset we are going to use for this project is available @ https://goo.gl/PmPkaG%22 
-
-Deliverables: Code/Visual charts and plots 
+Deliverables: Code/Visual charts and plots/Power Point presentation with summary. 
