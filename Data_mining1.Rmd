@@ -21,21 +21,21 @@ any.na
 ```
 Replace missing satisfaction service and selection values with mean
 ```{r basicconsole} cust.df$sat.service[is.na(cust.df$sat.service)] = round(mean(cust.df$sat.service)) 
-      cust.df$sat.selection[is.na(cust.df$sat.selection)] = round(mean(cust.df$sat.selection))
+ cust.df$sat.selection[is.na(cust.df$sat.selection)] = round(mean(cust.df$sat.selection))
 table(cust.df$sat.selection)
 table(cust.df$sat.service)
 ```
 Turn email into a binary variable 
 
-```{r} table(cust.df$email)
+```{r basicconsole} table(cust.df$email)
 cust.df<- cust.df %>% mutate(email = ifelse(email == "yes",1,0)) 
 str(cust.df) 
 ```
 
 Creat two new columns;'total.spend' that contains the sum of online and store spending for each customer and'total.trans'that contains the sum of online.trans and store.trans
-```{r}cust.df<- cust.df %>% mutate(total.spend = (online.spend + store.spend)) %>% 
+```{r basicconsole} cust.df<- cust.df %>% mutate(total.spend = (online.spend + store.spend)) %>% 
 mutate(total.trans = (online.trans+store.trans)) %>% 
-  mutate(total.spend = round(total.spend,1))
+mutate(total.spend = round(total.spend,1))
 cust.df <- round(cust.df,0)
 ```
 
