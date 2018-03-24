@@ -1,6 +1,6 @@
 install.packages("knitr")
 library(knitr)
-output:
+output:html_document
 
 #Analysis of Customer Survey Data
 ###By Bhavna Chouhan   
