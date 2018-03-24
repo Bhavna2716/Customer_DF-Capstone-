@@ -1,0 +1,71 @@
+---
+title: "Analysis of Customer Survey Data"
+author: "Bhavna Chouhan"
+date: "March 23, 2018"
+output: html_document
+keep_md = true 
+---
+
+#Introduction:  
+Customer feedback on company's products and services can play a key role in reshaping business strategy for better productivity. By combining customer feedback with other key details, about the customer we can gain valuable insights on customer behavior and other contributing factors that affect our business model both positively and negatively.
+
+After identifying key drivers and low impact factors we can design effective business solutions to boost sales and increase our loyal customer base.  
+
+##Problem: 
+* Marketing and sales teams of companies rely on key insights about their customers to design right communication tools. They need crucial details such as; targeted age group, frequency of transections, and shopping patterns. As well as ratio of online and in-store transections, purchasing power of customers etc. These specifics help build effective promotional and sales tools to maximize business. 
+>
+* Growing businesses constantly need to understand and improve the health of customer communications. Identifying the factors that make or break loyal customers is essential to build long lasting customer relationship. 
+
+##Data: 
+The data used for this analysis is a customer survey dataset that contains 1000 observations and 12 categories. It is collected by a customer relationship management team of a retail company in 2014. The dataset is available at [cust.df](http://goo.gl/PmPkaG) 
+
+##Client: 
+Retail company that has online and store presence. 
+
+##Approch: 
+
+* Data Mining  
+    + Find missing values and replace them with NA/mean depending on the variable 
+    + Create new variables that can improve analysis and enhance visual plots  
+
+*	Visual and Statistical Analysis 
+    + Design multiple plots to explain association between variables 
+    + Identify dependent, independent and binary variables and analyze their association 
+  
+*	Predictive Analysis 
+    +Use machine learning algorithms to evaluate factors that affect total sale
+   
+* Presentation summary of all the key findings 
+    + A brief summery about the project in the data story form 
+    + Power Point presentation that shows key findings of the analysis  
+
+##Deliverables: 
+* R Code, Visual graphics: Charts/Plots and Power Point presentation with summary. 
+
+##Questions: 
+1.	How well the products are performing and what do customers think of product selection and overall service? 
+
+2.	Are total sales related to the number of satisfying customers? In other words, how often do satisfied customer means a returning customer?
+
+3.	Do majority of our customers belong a specific age and income group?
+
+4.	What percentage of customers prefer online shopping vs in-store shopping?
+
+5. What's the average credit score that most customers have? Can credit score be a good measure of the amount spent by a customer? 
+
+6. Do number of online transection go up along with the number on visits? 
+
+7. How closely distance to store is related to customer's preference to shop online or in-store? 
+(Do customers living close to store prefer in-store shopping over online shopping and vice a versa?) 
+
+8. Can we divide customers into categories based on the amount they spend online?
+
+9. Spot 'prospects' (window shoppers) and VIPs, these can be good targets for future sales
+
+10. What's the average min and maximum amount our customers spend shopping? Does this mean          differ significantly for online and store buyers.
+
+
+ 
+
+
+
