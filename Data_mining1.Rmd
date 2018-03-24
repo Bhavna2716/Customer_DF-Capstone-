@@ -1,0 +1,49 @@
+---
+title: "Data_Mining"
+author: "Bhavna Chouhan"
+output: html_document
+---
+Install tidy packages 
+```{r basicconsole}install.packages("tidyverse")
+library(dplyr)
+library(tidyr)
+```
+
+Load and examin the datset 
+```{r basicconsole}cust.df <- read.csv("http://goo.gl/PmPkaG")
+str(cust.df)
+```
+
+Find columns with missing values and zeros 
+```{r basicconsole} colSums(is.na(cust.df))
+any.na <- lapply(cust.df, function(x){length(which(x==0))}) 
+any.na
+```
+Replace missing satisfaction service and selection values with mean
+```{r basicconsole} cust.df$sat.service[is.na(cust.df$sat.service)] = round(mean(cust.df$sat.service)) 
+      cust.df$sat.selection[is.na(cust.df$sat.selection)] = round(mean(cust.df$sat.selection))
+table(cust.df$sat.selection)
+table(cust.df$sat.service)
+```
+Turn email into a binary variable 
+
+```{r} table(cust.df$email)
+cust.df<- cust.df %>% mutate(email = ifelse(email == "yes",1,0)) 
+str(cust.df) 
+```
+
+Creat two new columns;'total.spend' that contains the sum of online and store spending for each customer and'total.trans'that contains the sum of online.trans and store.trans
+```{r}cust.df<- cust.df %>% mutate(total.spend = (online.spend + store.spend)) %>% 
+mutate(total.trans = (online.trans+store.trans)) %>% 
+  mutate(total.spend = round(total.spend,1))
+cust.df <- round(cust.df,0)
+```
+
+Divide the customers into four categories based on the total amount spent by them
+```{r}levels<- c(-Inf,50,250,500,4000) 
+labels <-c("Prospects","Regular","Premium","VIP")
+cust.df <- cust.df %>% mutate(cust.category = cut(total.spend,levels,labels = labels))
+str(cust.df)
+max(cust.df$total.spend)
+table(cust.df$cust.category)
+``` 
