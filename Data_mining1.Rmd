@@ -40,6 +40,7 @@ cust.df <- round(cust.df,0)
 ```
 
 Divide the customers into four categories based on the total amount spent by them
+
 ```{r}levels<- c(-Inf,50,250,500,4000) 
 labels <-c("Prospects","Regular","Premium","VIP")
 cust.df <- cust.df %>% mutate(cust.category = cut(total.spend,levels,labels = labels))
@@ -47,3 +48,35 @@ str(cust.df)
 max(cust.df$total.spend)
 table(cust.df$cust.category)
 ``` 
+Identify the customers as per their categories by selecting cust.id for each group 
+
+```{r}
+Target_Prospects <- cust.df[cust.df$cust.category == "Prospects","cust.id"] 
+Target_Regular <- cust.df[cust.df$cust.category == "Regular", "cust.id"] 
+Target_Premium <- cust.df[cust.df$cust.category == "Premium", "cust.id"]
+Target_VIP <- cust.df[cust.df$cust.category == "VIP", "cust.id"]
+Target_VVIP <- cust.df[cust.df$cust.category == "VVIP", "cust.id"]
+```
+Map the percentage of every customer category for distinct satisfaction ratings. 
+
+```{r}
+service_dist_Prospects <- cust.df[cust.df$cust.category == "Prospects", "sat.service"]
+service_dist_Prospects
+service_dist_Regular <- cust.df[cust.df$cust.category == "Regular","sat.service"]
+service_dist_Regular
+service_dist_Premium <- cust.df[cust.df$cust.category == "Premium","sat.service"]
+service_dist_Premium
+service_dist_VIP <- cust.df[cust.df$cust.category == "VIP","sat.service"]
+service_dist_VIP
+service_dist_VVIP <- cust.df[cust.df$cust.category == "VVIP","sat.service"]
+service_dist_VVIP
+```
+Find percetage wise distribution for each category 
+```{r}
+prop.table(table(service_dist_Prospects))
+prop.table(table(service_dist_Regular))
+prop.table(table(service_dist_Premium))
+prop.table(table(service_dist_VIP))
+```
+
+prop.table(table(service_dist_VVIP)) 
