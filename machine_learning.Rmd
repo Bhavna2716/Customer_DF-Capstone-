@@ -1,0 +1,25 @@
+---
+title: "Machine_learning"
+author: "Bhavna Chouhan"
+date: "April 4, 2018"
+output: html_document
+---
+# Apply Machine Learning to Build Prediction Model 
+The variables of the cust.df dataset are not distributed in a manner that allows opportunity for explore multiple prediction opportunity.
+
+Furthermore, some data points like time and date, gender of the customer and type of product purchased are also missing from the dataset. These elements would have provided the opportunity to predict multiple scenarios that could be useful to the client. 
+Therefore, we are going to focus on building  prediction models for our key factor Total.spend. 
+## Selecting Model: 
+Due to the limitations of the dataset the Linear Regression would be the best choice for building a prediction model. 
+
+## Selecting variables 
+Since total sale is a dependable variable that is directly affected by total transection, online visits and store transection we will focus on these variables. However, there are other variables like credit score, age etc. which could also play a role in maximizing the result.   
+
+## Predicting Maximum Sell: 
+Total Spend column represents the total amount spent by each customer via multiple store and online transactions. As highest total sell would mean maximum profit we would try to build a model to achieve maximum total.spend. 
+
+
+After multiple trials we have a model that has R squared value of 9.871 which is considered very good, so we can conclude that this is going to be our final prediction model to predict maximum sell. 
+We have also examined the model objects which are in align with our conclusion that this is going to be a good model to predict max sell.
+
+
