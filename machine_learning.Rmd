@@ -10,7 +10,7 @@ The variables of the cust.df dataset are not distributed in a manner that allows
 Furthermore, some data points like time and date, gender of the customer and type of product purchased are also missing from the dataset. These elements would have provided the opportunity to predict multiple scenarios that could be useful to the client. 
 Therefore, we are going to focus on building  prediction models for our key factor Total.spend. 
 ## Selecting Model: 
-Due to the limitations of the dataset the Linear Regression would be the best choice for building a prediction model. 
+Due to the limitations of the dataset Linear Regression Method would be the best choice for building a prediction model. 
 
 ## Selecting variables 
 Since total sale is a dependable variable that is directly affected by total transection, online visits and store transection we will focus on these variables. However, there are other variables like credit score, age etc. which could also play a role in maximizing the result.   
